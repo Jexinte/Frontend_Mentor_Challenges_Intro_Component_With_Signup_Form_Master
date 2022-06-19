@@ -39,22 +39,26 @@ form.addEventListener('submit',(e) => {
        if(firstName.value === "") {
              firstNameError.textContent = "First Name cannot be empty"
              error1Img.style.visibility = "visible"
+             firstName.style.border = "1px solid red"
        }   
 
        else {
          firstNameError.textContent = ""
          error1Img.style.visibility = "hidden"
+         firstName.style.border ="1px solid #EAEAEA"
        }
 
       
        if(lastName.value === "") {
          lastNameError.textContent = "Last Name cannot be empty"
          error2Img.style.visibility = "visible"
+         lastName.style.border = "1px solid red"
       }
 
       else {
           lastNameError.textContent = ""
           error2Img.style.visibility = "hidden"
+          lastName.style.border ="1px solid #EAEAEA"
         }
 
 
@@ -63,6 +67,7 @@ form.addEventListener('submit',(e) => {
             error3Img.style.visibility = "visible"
             mail.classList.add('placeholdercolor')
             mail.placeholder = "email@example/com"
+            mail.style.border = "1px solid red"
             
          }
 
@@ -72,16 +77,19 @@ form.addEventListener('submit',(e) => {
             mail.classList.remove('placeholdercolor')
              mailError.textContent = ""
              error3Img.style.visibility = "hidden"
+             mail.style.border ="1px solid #EAEAEA"
            }
           
            if(password.value === "") {
             passwordError.textContent = "Password cannot be empty"
             error4Img.style.visibility = "visible"
+            password.style.border = "1px solid red"
            }
 
            else {
             passwordError.textContent = ""
             error4Img.style.visibility = "hidden"
+            password.style.border = "1px solid #EAEAEA"
            }
        
 

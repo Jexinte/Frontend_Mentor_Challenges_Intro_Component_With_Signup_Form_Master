@@ -49,21 +49,171 @@ a:visited {
     color:var(--white);
 }
 
+
 body {
     font-size: var(--fSize);
     background-image: url(../images/bg-intro-mobile.png);
     background-color: var(--red);
     font-family: var(--poppins);
-    padding: 5em 1em 0 1em;
+    background-attachment: fixed;
 }
 
 section {
     padding-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    gap:3em;
+    align-items: center;
+    min-height: 100vh;
+    padding-inline: 2em;
+    overflow-x: hidden;
+
 }
+
+.left-side h1 {
+    padding-bottom: .9em;
+    color: var(--white);
+    font-weight: var(--700);
+    font-size: 3em;
+    line-height: 1.2em;
+}
+
+.left-side p {
+    color:var(--white);
+    font-weight: var(--500);
+    width: 32em;
+    font-size: 14px;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+form {
+    background-color: var(--white);
+    padding: 1.6em;
+    border-radius: 10px;
+    box-shadow: -1px 7px 1px rgba(0,0,0,0.2);
+    /* width: 540px;
+    height: 562px; */
+}
+
+
+label {
+    position: relative;
+}
+input {
+    height: 54px;
+    border-radius: 10px;
+    border:1px solid #EAEAEA;
+    padding-left:1em;
+    font-weight: var(--600);
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+input + img {
+    position: absolute;
+    top:-1px;
+    right:1em;
+}
+
+
+#trial-7 {
+    background-color: var(--blue);
+    padding: 1em 2em;
+    border-radius: 10px;
+    font-weight: var(--500);
+    margin-bottom: 1em;
+    box-shadow: -1px 7px 1px rgba(0,0,0,0.2);
+}
+
+
+.errormsg {
+    position: relative;
+    font-size: 11px;
+    color:var(--red);
+    bottom:10px;
+    left:107px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.placeholdercolor {
+    color:red;
+}
+
+#trial {
+    background-color: var(--green);
+    padding: 1.3em 2em;
+    margin-bottom: 1em;
+    /* display: block; */
+    border-radius: 10px;
+    border-bottom-style: groove;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-width: 4px;
+    font-weight: var(--700);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px; /* Changer la taille plus tard */ 
+    border-top:none;
+    border-right: none;
+    border-left:none;
+    color:var(--white);
+    width: 97%;
+    cursor: pointer;
+}
+
+#trial > span {
+    position: relative;
+    top:2px;
+}
+
+#trial:hover{
+    filter:brightness(110%)
+}
+
+#terms {
+    font-size: 11px;
+    color:var(--grayishBlue);
+}
+
+#terms span {
+    color:var(--red);
+    font-weight: var(--700);
+    cursor: pointer;
+}
+/* DESKTOP */
+
+@media screen and (min-width:1050px) and (max-width:1134px) {
+    .errormsg {
+        left:150px;
+    }
+}
+
+@media screen and (min-width:1031px) and (max-width:1270px) {
+    .errormsg {
+        left:106px;
+    }
+}
+
+
+@media screen and (min-width:992px) and (max-width:1031px) {
+    .errormsg {
+        left:100px;
+    }
+}
+
 
 /* MOBILE SIZE */
 
 @media screen and (max-width:992px) {
+
+    body {
+        padding: 5em 1em 0 1em;
+    }
         
         section {
             display: flex;
@@ -79,12 +229,15 @@ section {
             padding-bottom: .9em;
             color: var(--white);
             font-weight: var(--700);
+            font-size: 2em;
         }
         
         .left-side p {
-            padding-bottom: 4em;
+            font-size: 11px;
+            padding-inline: 2.8em;
             color: var(--white);
             font-weight: var(--400);
+            
         }
         
         .right-side {
@@ -160,7 +313,7 @@ section {
         border-width: 4px;
         font-weight: var(--600);
         text-transform: uppercase;
-        font-size: 14px; /* Changer la taille plus tard */ 
+        font-size: 13px; /* Changer la taille plus tard */ 
         border-top:none;
         border-right: none;
         border-left:none;
@@ -178,6 +331,10 @@ section {
         top:2px;
     }
 
+    #trial:focus {
+        border:none;
+    }
+
     #terms {
         font-size: 11px;
         color:var(--grayishBlue);
@@ -186,6 +343,7 @@ section {
     #terms span {
         color:var(--red);
         font-weight: var(--700);
+        cursor: pointer;
     }
 
     
