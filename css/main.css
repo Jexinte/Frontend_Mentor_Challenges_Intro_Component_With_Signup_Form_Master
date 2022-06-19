@@ -1,0 +1,192 @@
+/* POPPINS  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+
+    /* PRIMARY  */
+
+        --red :hsl(0, 100%, 74%);
+        --green :hsl(154, 59%, 51%);
+        --white : white;
+
+    /* ACCENT */
+
+        --blue: hsl(248, 32%, 49%);
+
+    /* NEUTRAL */
+
+        --darkBlue: hsl(249, 10%, 26%);
+        --grayishBlue: hsl(246, 25%, 77%);
+
+    /* FONT SIZE  */
+
+        --fSize:16px;
+
+    /* FONT FAMILY  */
+
+       --poppins : 'Poppins';
+
+    /* FONT WEIGHT  */
+
+      --400:400;
+      --500:500;
+      --600:600;
+      --700:700;
+}
+
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+a:visited {
+    color:var(--white);
+}
+
+body {
+    font-size: var(--fSize);
+    background-image: url(../images/bg-intro-mobile.png);
+    background-color: var(--red);
+    font-family: var(--poppins);
+    padding: 5em 1em 0 1em;
+}
+
+section {
+    padding-bottom: 4em;
+}
+
+/* MOBILE SIZE */
+
+@media screen and (max-width:992px) {
+        
+        section {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .left-side {
+            text-align: center;
+            
+        }
+        
+        .left-side h1 {
+            padding-bottom: .9em;
+            color: var(--white);
+            font-weight: var(--700);
+        }
+        
+        .left-side p {
+            padding-bottom: 4em;
+            color: var(--white);
+            font-weight: var(--400);
+        }
+        
+        .right-side {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        #trial-7 {
+        background-color: var(--blue);
+        padding: 1em 2em;
+        border-radius: 10px;
+        font-weight: 600;
+        margin-bottom: 1em;
+        box-shadow: -1px 7px 1px rgba(0,0,0,0.2);
+    }
+
+
+
+    form {
+        background-color: var(--white);
+        padding: 1.6em;
+        border-radius: 10px;
+        box-shadow: -1px 7px 1px rgba(0,0,0,0.2);
+        
+    }
+
+    label {
+        position: relative;
+    }
+    input {
+        height: 54px;
+        border-radius: 10px;
+        border:1px solid #EAEAEA;
+        padding-left:1em;
+        font-weight: var(--600);
+        margin-bottom: 1em;
+ 
+    }
+
+    input + img {
+        position: absolute;
+        top:-1px;
+        right:1em;
+    }
+
+    .errormsg {
+        position: relative;
+        font-size: 11px;
+        color:var(--red);
+        bottom:10px;
+        left:1px;
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    .input--width {
+        width: 97%;
+    }
+
+    .placeholdercolor {
+        color:var(--red);
+    }
+
+    #trial {
+        background-color: var(--green);
+        padding: 1em 2em;
+        margin-bottom: 1em;
+        /* display: block; */
+        border-radius: 10px;
+        border-bottom-style: groove;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        border-width: 4px;
+        font-weight: var(--600);
+        text-transform: uppercase;
+        font-size: 14px; /* Changer la taille plus tard */ 
+        border-top:none;
+        border-right: none;
+        border-left:none;
+        color:var(--white);
+        width: 97%;
+        cursor: pointer;
+    }
+
+    .trial--brightness:hover{
+        filter:brightness(110%)
+    }
+
+    #trial > span {
+        position: relative;
+        top:2px;
+    }
+
+    #terms {
+        font-size: 11px;
+        color:var(--grayishBlue);
+    }
+
+    #terms span {
+        color:var(--red);
+        font-weight: var(--700);
+    }
+
+    
+}
